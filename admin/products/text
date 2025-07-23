@@ -1,0 +1,8 @@
+في ملف الحذف
+                        <!-- <td>
+                            <!-- <?php if ($row['image_url']): ?>
+                                <img src="<?php echo $row['image_url']; ?>" alt="صورة المنتج" class="product-image">
+                            <?php else: ?>
+                                <span>لا توجد صورة</span>
+                            <?php endif; ?> -->
+                        </td> -->

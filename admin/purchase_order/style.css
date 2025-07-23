@@ -1,0 +1,134 @@
+/* style.css */
+
+/* الخط العام */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    direction: rtl;
+}
+
+/* الحاوية الرئيسية */
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* العناوين */
+h1, h2 {
+    color: #0d6efd;
+    margin-bottom: 20px;
+}
+
+/* أقسام النموذج */
+.form-section {
+    margin-bottom: 30px;
+    border: 1px solid #dee2e6;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fdfdfe;
+}
+
+/* الحقول داخل كل قسم */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* عناصر الإدخال */
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 15px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+}
+
+/* زر الإجراء */
+.action-buttons {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.action-buttons input[type="submit"],
+.action-buttons .cancel-button {
+    padding: 10px 25px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    margin: 5px;
+}
+
+.action-buttons input[type="submit"] {
+    background-color: #198754;
+    color: white;
+}
+
+.action-buttons .cancel-button {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* عناصر المنتجات */
+.item-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.item-row select,
+.item-row input {
+    flex: 1;
+}
+
+.remove-item {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* زر الإضافة */
+.add-item-button {
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+/* رسائل النظام */
+.message {
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.message.success {
+    background-color: #d1e7dd;
+    color: #0f5132;
+}
+
+.message.error {
+    background-color: #f8d7da;
+    color: #842029;
+}

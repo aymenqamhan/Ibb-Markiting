@@ -1,0 +1,333 @@
+/* inventory_styles.css */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa; /* Light background */
+    direction: rtl; /* Ensure RTL direction for the entire body */
+    text-align: right; /* Default text alignment for RTL */
+    color: #333; /* Default text color */
+}
+
+/* Adjust Bootstrap defaults for RTL if needed, though Bootstrap 5 handles RTL well */
+.container-fluid {
+    padding: 30px; /* More padding for a better look */
+    margin-top: 20px;
+}
+
+/* Page Header (specific to edit_product_prices.php and similar admin pages) */
+.page-header {
+    background-color: #0056b3; /* Primary blue as per image_3df79e.png */
+    color: white;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 5px solid #0056b3; /* Darker shade of blue for border */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.page-header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+.page-header h1 i {
+    margin-left: 15px; /* Space for icon in RTL */
+    font-size: 1.8rem;
+}
+
+.page-header .btn {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.page-header .btn:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+}
+.page-header .btn i {
+    margin-right: 5px; /* Adjust icon spacing for RTL */
+}
+
+/* Card Styling (General for both inventory and price edit) */
+.card {
+    margin-bottom: 25px; /* Slightly more space between cards */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.08); /* Stronger, softer shadow */
+    border: none;
+    border-radius: 12px; /* More rounded corners */
+    overflow: hidden; /* Ensures border-radius applies to content */
+}
+
+.card-header {
+    background-color: #2c3e50; /* Primary blue for headers, consistent with page header */
+    color: white;
+    font-weight: 600; /* Slightly bolder font */
+    font-size: 1.25rem; /* Larger font size for headers */
+    border-radius: 12px 12px 0 0;
+    padding: 18px 25px; /* More padding inside header */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card-header h5 {
+    margin-bottom: 0;
+    color: white; /* Ensure text is white */
+}
+
+/* Styling for the collapsable filter header */
+.filter-header {
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    color: rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important;
+}
+
+.filter-header:hover {
+    background-color: #0069d9; /* Darker blue on hover */
+}
+
+.filter-header i {
+    transition: transform 0.3s ease;
+}
+
+.filter-header[aria-expanded="true"] i {
+    transform: rotate(180deg);
+}
+
+.card-body {
+    padding: 25px; /* Consistent padding */
+}
+
+.form-label {
+    font-weight: 500;
+    color: #343a40;
+}
+
+.table-responsive {
+    margin-top: 20px;
+    border: 1px solid #dee2e6; /* Light border around table responsive div */
+    border-radius: 8px; /* Match card border-radius */
+    overflow-x: auto; /* Ensure horizontal scroll for tables */
+}
+
+.table {
+    margin-bottom: 0; /* Remove default table bottom margin */
+    white-space: nowrap; /* Prevent text wrapping in cells for better alignment */
+}
+
+.table thead th {
+    background-color: #343a40; /* Darker header for table */
+    color: white;
+    font-weight: 600;
+    vertical-align: middle;
+    padding: 12px 15px;
+    border-bottom: none; /* Remove default bottom border */
+    text-align: right; /* Ensure headers are right-aligned in RTL */
+}
+
+.table tbody td {
+    vertical-align: middle;
+    padding: 10px 15px;
+    text-align: right; /* Ensure cell content is right-aligned in RTL */
+}
+
+.table-bordered th,
+.table-bordered td {
+    border: 1px solid #dee2e6; /* Consistent border for cells */
+}
+
+.table-hover tbody tr:hover {
+    background-color: #f2f2f2; /* Lighter hover effect */
+}
+
+/* Specific badge styling for inventory status */
+.badge-status {
+    padding: 0.5em 0.8em;
+    border-radius: 0.5rem;
+    font-size: 0.8em;
+    font-weight: 600;
+    display: inline-block;
+    min-width: 80px; /* Ensure badges have minimum width */
+    text-align: center;
+}
+
+.badge-in-stock { background-color: #28a745; color: white; } /* Success */
+.badge-low-stock { background-color: #ffc107; color: #343a40; } /* Warning */
+.badge-out-of-stock { background-color: #dc3545; color: white; } /* Danger */
+
+/* Action buttons styling */
+.btn-sm {
+    padding: 0.3rem 0.7rem; /* Slightly larger small buttons */
+    font-size: 0.85rem;
+    border-radius: 0.3rem;
+}
+
+.btn-info {
+    background-color: #17a2b8; /* Info blue */
+    border-color: #17a2b8;
+}
+.btn-info:hover {
+    background-color: #138496;
+    border-color: #117a8b;
+}
+
+.btn-danger {
+    background-color: #dc3545; /* Danger red */
+    border-color: #dc3545;
+}
+.btn-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+
+.text-center.py-4 i {
+    font-size: 1.5rem; /* Larger icon for no products message */
+    color: #6c757d;
+}
+
+/* Adjust margin for form elements in RTL */
+.form-control, .form-select {
+    margin-bottom: 10px; /* Space below form controls */
+}
+
+.row.g-3 .col-md-4:last-child .btn {
+    margin-bottom: 0; /* Remove bottom margin for the button in the last column */
+}
+
+/* Back to dashboard button (general) */
+.text-center.mt-3 .btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    padding: 0.6rem 1.2rem; /* Larger button */
+    font-size: 1rem;
+    border-radius: 0.5rem;
+}
+.text-center.mt-3 .btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
+}
+
+/* Ensure icons have proper spacing */
+.btn .fas {
+    margin-left: 5px; /* Space between icon and text for RTL */
+}
+
+/* Specific styles for the price input fields in table */
+.price-input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    text-align: left; /* Prices are often LTR even in RTL layouts */
+    font-weight: 600;
+}
+.price-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25);
+    outline: none;
+}
+
+.update-all-btn {
+    background-color: #28a745; /* Green for update button */
+    border-color: #28a745;
+    font-weight: 600;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    width: 100%; /* Full width button */
+    transition: all 0.3s ease;
+}
+.update-all-btn:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(40, 167, 69, 0.3);
+}
+
+/* Alert messages styling */
+.alert {
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+}
+.alert .btn-close {
+    margin-right: auto; /* Push close button to the left in RTL */
+    margin-left: 0;
+}
+.alert-danger {
+    background-color: #fdeded;
+    border-color: #f5c6cb;
+    color: #721c24;
+}
+.alert-success {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .page-header {
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 15px;
+        text-align: right;
+    }
+    .page-header h1 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+        width: 100%;
+        justify-content: flex-end;
+    }
+    .page-header .btn {
+        width: 100%;
+        justify-content: center;
+        font-size: 1rem;
+        padding: 8px 15px;
+    }
+    .table-responsive {
+        margin-top: 15px;
+    }
+    .card-body {
+        padding: 15px;
+    }
+    .update-all-btn {
+        padding: 10px 20px;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .container-fluid {
+        padding: 10px;
+    }
+    .card {
+        border-radius: 8px;
+    }
+    .card-header {
+        border-radius: 8px 8px 0 0;
+        font-size: 1rem;
+        padding: 15px;
+    }
+    .table thead th, .table tbody td {
+        padding: 8px 10px;
+        font-size: 0.9rem;
+    }
+    .price-input {
+        padding: 6px 8px;
+        font-size: 0.9rem;
+    }
+}

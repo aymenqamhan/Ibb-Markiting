@@ -1,0 +1,212 @@
+/* price_update_styles.css */
+
+body {
+    background-color: #eef2f6; /* Soft light background */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+.main-wrapper {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Optional: subtle background pattern or gradient */
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.container {
+    max-width: 900px; /* Max width for better readability */
+}
+
+/* Card Styling */
+.card {
+    border-radius: 1rem; /* More rounded corners */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Deeper shadow */
+    overflow: hidden; /* Ensures rounded corners apply to children */
+}
+
+.card-header {
+    background-color: #0d6efd; /* Default Bootstrap primary blue */
+    /* Gradient for a professional look */
+    background: linear-gradient(90deg, #0d6efd 0%, #0b5ed7 100%);
+    border-bottom: none; /* Remove default border */
+}
+
+.card-header h4 {
+    font-weight: 700; /* Bold title */
+    color: #ffffff; /* White text for header */
+}
+
+.back-btn {
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.5);
+    color: #ffffff;
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.card-body {
+    background-color: #ffffff;
+    padding: 2.5rem; /* More padding */
+}
+
+/* Alert messages styling */
+.alert {
+    border-radius: 0.75rem;
+    font-size: 1.05rem;
+    margin-bottom: 2rem; /* More space below alerts */
+}
+
+.alert-info.text-center {
+    background-color: #e0f7fa; /* Light blue */
+    border-color: #b2ebf2;
+    color: #007bbd;
+}
+.alert-info .fas {
+    color: #007bbd;
+}
+
+/* Table styling */
+.product-price-table {
+    margin-top: 1.5rem;
+    border-collapse: separate; /* Allows border-radius on cells */
+    border-spacing: 0;
+}
+
+.product-price-table thead th {
+    background-color: #343a40; /* Darker header for contrast */
+    color: #f8f9fa; /* Light text */
+    font-weight: 600;
+    padding: 1rem 1.25rem; /* More padding */
+    border-bottom: 3px solid #0d6efd; /* Stronger accent border */
+    text-align: center;
+}
+
+.product-price-table thead th:first-child {
+    border-top-right-radius: 0.5rem; /* Rounded corners for first header cell */
+}
+.product-price-table thead th:last-child {
+    border-top-left-radius: 0.5rem; /* Rounded corners for last header cell */
+}
+
+.product-price-table tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.product-price-table tbody tr:hover {
+    background-color: #f0f8ff; /* Lighter hover effect */
+}
+
+.product-price-table tbody td {
+    padding: 1rem 1.25rem; /* More padding for body cells */
+    vertical-align: middle;
+    border-top: 1px solid #dee2e6;
+    text-align: center;
+}
+
+.product-name-cell {
+    font-weight: 500;
+    color: #212529; /* Darker text for product name */
+    text-align: start !important; /* Ensure left align for RTL */
+}
+
+.current-price-cell {
+    font-weight: 600;
+    color: #28a745; /* Green for current price */
+}
+
+.new-price-input-cell .price-update-form {
+    gap: 0.75rem; /* Space between input and button */
+}
+
+.price-input {
+    max-width: 120px; /* Limit input width */
+    text-align: center;
+    border-radius: 0.375rem; /* Slightly rounded */
+    border: 1px solid #ced4da;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.price-input:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.update-btn {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    min-width: 80px; /* Consistent button width */
+}
+
+.update-btn:hover {
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+    transform: translateY(-1px);
+}
+
+.update-btn .fas {
+    font-size: 0.85rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-bottom: 1rem;
+    }
+    .card-header .back-btn {
+        margin-top: 1rem;
+        width: 100%;
+        text-align: center;
+    }
+    .card-body {
+        padding: 1.5rem;
+    }
+    .product-price-table thead th,
+    .product-price-table tbody td {
+        padding: 0.75rem 0.5rem; /* Reduce padding on small screens */
+        font-size: 0.9rem;
+    }
+    .price-input {
+        max-width: 100px; /* Further limit input width */
+    }
+    .update-btn {
+        min-width: unset; /* Let it shrink on mobile */
+        padding: 0.375rem 0.75rem; /* Adjust padding */
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 0 15px; /* Add some padding on very small screens */
+    }
+    .card {
+        border-radius: 0.5rem;
+    }
+    .card-header {
+        border-radius: 0.5rem 0.5rem 0 0;
+    }
+    .price-update-form {
+        flex-direction: column; /* Stack input and button vertically */
+        gap: 0.5rem;
+    }
+    .price-input {
+        width: 100%; /* Full width when stacked */
+        max-width: unset;
+    }
+    .update-btn {
+        width: 100%; /* Full width when stacked */
+    }
+}

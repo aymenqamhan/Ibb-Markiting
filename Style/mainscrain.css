@@ -1,0 +1,89 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.hero {
+    text-align: center;
+    padding: 25px 20px 100PX;
+    background: linear-gradient(135deg, #435a70, #2c3e50);
+    color: #fff;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.hero hr {
+
+    width: 50%;
+    /* الحجم الابتدائي */
+    height: 3px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    border: none;
+    transition: all 0.5s ease;
+    /* لتطبيق الحركة بسلاسة */
+    transform: translateY(0);
+    /* الوضع الافتراضي */
+}
+
+.hero:hover hr {
+    width: 75%;
+    /* الحجم بعد التفاعل */
+    transform: translateY(10px);
+    /* النزول قليلاً */
+}
+
+.hero h1 {
+    direction: rtl;
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    direction: rtl;
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/*زر ibb marketing*/
+.button {
+    height: 50px;
+    width: 220px;
+    position: relative;
+    background-color: transparent;
+    cursor: pointer;
+    border: 2px solid #ffffff;
+    overflow: hidden;
+    border-radius: 30px;
+    color: #ffffff;
+    transition: all 0.5s ease-in-out;
+}
+
+.btn-txt {
+    z-index: 1;
+    font-weight: 800;
+    letter-spacing: 4px;
+}
+
+.type1::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 0.5s ease-in-out;
+    background-color: #fffafa;
+    border-radius: 30px;
+    visibility: hidden;
+    height: 10px;
+    width: 10px;
+    z-index: -1;
+}
+
+.button:hover {
+    box-shadow: 1px 1px 200px #ada5a5;
+    color: #000000;
+    border: none;
+}
+
+.type1:hover::after {
+    visibility: visible;
+    transform: scale(100) translateX(2px);
+}

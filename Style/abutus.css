@@ -1,0 +1,84 @@
+/* الخط الأساسي */
+
+@font-face {
+    font-family: "Cairo";
+    src: url("../webfonts/Cairo-VariableFont_slnt,wght.ttf") format("truetype");
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+      font-family: "Cairo", sans-serif;
+}
+body {
+    background-color: #f5f7fa;
+    color: #2c3e50;
+    margin: 0;
+    padding: 0;
+    line-height: 1.8;
+}
+
+/* العنوان الرئيسي */
+h1 {
+    text-align: center;
+    color: #1f3a5f;
+    margin: 40px 10px 20px;
+    font-size: 2.5rem;
+    position: relative;
+}
+
+.teem_logo {
+    width: 50px;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+/* حاوية المحتوى */
+.main-con-abut {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    margin-bottom: 40px;
+    border-color:3px solid #B29242;
+}
+
+/* الفقرة التعريفية */
+.main-con-abut p {
+    font-size: 1.1rem;
+    color: #34495e;
+    text-align: justify;
+}
+
+/* التأكيد على اسم الفريق */
+.main-con-abut strong {
+    color: #B29242;
+}
+
+/* الجملة الختامية */
+.main-con-abut em {
+    display: block;
+    margin-top: 20px;
+    font-style: italic;
+    color: #555;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+/* استجابة للشاشات الصغيرة */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    .main-con-abut {
+        padding: 20px;
+    }
+
+    .teem_logo {
+        width: 40px;
+    }
+}

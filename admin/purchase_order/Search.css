@@ -1,0 +1,377 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8f9fa;
+    /* لون خلفية فاتح */
+    color: #343a40;
+    /* لون نص أساسي داكن قليلاً */
+    direction: rtl;
+    /* الاتجاه من اليمين لليسار للعربية */
+    text-align: right;
+    /* محاذاة النص لليمين */
+    padding: 20px;
+    /* مسافة داخلية حول محتوى الصفحة */
+}
+
+/* نمط الحاوية الرئيسية للصفحة */
+.container {
+    max-width: 900px;
+    /* أقصى عرض للحاوية */
+    margin: 40px auto;
+    /* توسيط الحاوية مع مسافة علوية وسفلية */
+    background-color: #ffffff;
+    /* خلفية بيضاء للحاوية */
+    padding: 30px;
+    /* مسافة داخلية حول المحتوى داخل الحاوية */
+    border-radius: 12px;
+    /* حواف مستديرة قليلاً */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    /* ظل خفيف لتحسين المظهر */
+    border: 1px solid #e0e0e0;
+    /* حدود خفيفة */
+}
+
+/* نمط العناوين */
+h1 {
+    color: #007bff;
+    /* لون أزرق جذاب للعناوين */
+    text-align: center;
+    /* توسيط العنوان */
+    margin-bottom: 30px;
+    /* مسافة أسفل العنوان */
+    font-weight: 600;
+    /* وزن خط متوسط */
+    font-size: 2.2rem;
+    /* حجم خط أكبر قليلاً */
+}
+
+/* نمط رسائل التنبيه (النجاح والخطأ) */
+.message {
+    padding: 15px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    /* حواف مستديرة */
+    font-weight: 500;
+    text-align: center;
+    border: 1px solid transparent;
+    /* حدود شفافة افتراضية */
+    transition: all 0.3s ease-in-out;
+    /* انتقال سلس عند التغيير */
+}
+
+.message.error {
+    background-color: #f8d7da;
+    /* خلفية حمراء فاتحة للخطأ */
+    color: #721c24;
+    /* نص أحمر داكن للخطأ */
+    border-color: #f5c6cb;
+    /* حدود حمراء للخطأ */
+}
+
+.message.success {
+    background-color: #d4edda;
+    /* خلفية خضراء فاتحة للنجاح */
+    color: #155724;
+    /* نص أخضر داكن للنجاح */
+    border-color: #c3e6cb;
+    /* حدود خضراء للنجاح */
+}
+
+/* نمط نموذج البحث */
+.search-form {
+    background-color: #f0f8ff;
+    /* خلفية زرقاء فاتحة لنموذج البحث */
+    padding: 25px;
+    border-radius: 10px;
+    /* حواف مستديرة */
+    margin-bottom: 35px;
+    border: 1px solid #d1ecf1;
+    /* حدود زرقاء خفيفة */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    /* ظل خفيف */
+}
+
+.search-form .form-group {
+    margin-bottom: 20px;
+    /* مسافة بين مجموعات الحقول */
+    display: flex;
+    /* استخدام فليكس بوكس للمحاذاة */
+    align-items: center;
+    /* محاذاة العناصر عموديا في المنتصف */
+    gap: 15px;
+    /* مسافة بين العناصر */
+}
+
+.search-form .form-group label {
+    flex: 0 0 130px;
+    /* عرض ثابت للتسمية */
+    margin-bottom: 0;
+    /* إزالة الهامش الافتراضي */
+    text-align: right;
+    /* محاذاة التسمية لليمين */
+    font-weight: 500;
+    /* وزن خط متوسط */
+    color: #495057;
+    /* لون نص أغمق قليلاً للتسميات */
+}
+
+.search-form .form-group input,
+.search-form .form-group select {
+    flex: 1;
+    /* جعل حقول الإدخال والselect تتمدد لملء المساحة */
+    max-width: 350px;
+    /* أقصى عرض لحقول الإدخال */
+    border: 1px solid #ced4da;
+    /* حدود خفيفة */
+    border-radius: 6px;
+    /* حواف مستديرة */
+    padding: 10px 15px;
+    /* مسافة داخلية */
+    background-color: #ffffff;
+    /* خلفية بيضاء للحقول */
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    /* انتقال سلس عند التركيز */
+}
+
+.search-form .form-group input:focus,
+.search-form .form-group select:focus {
+    border-color: #80bdff;
+    /* تغيير لون الحدود عند التركيز */
+    box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25);
+    /* ظل عند التركيز */
+    outline: none;
+    /* إزالة الخط الخارجي الافتراضي */
+}
+
+/* نمط زر البحث */
+.search-form button[type="submit"] {
+    display: block;
+    /* جعل الزر يأخذ سطرًا كاملاً */
+    margin: 25px auto 0 auto;
+    /* توسيط الزر مع مسافة علوية */
+    width: fit-content;
+    /* عرض الزر حسب المحتوى */
+    padding: 12px 35px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
+    /* ظل جذاب */
+}
+
+.search-form button[type="submit"]:hover {
+    background-color: #0056b3;
+    /* لون أغمق عند التحويم */
+    transform: translateY(-2px);
+    /* تأثير رفع خفيف */
+    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.3);
+    /* ظل أكبر عند التحويم */
+}
+
+.search-form button[type="submit"]:active {
+    transform: translateY(0);
+    /* إعادة الزر لمكانه عند النقر */
+    box-shadow: 0 2px 10px rgba(0, 123, 255, 0.1);
+}
+
+/* ملخص البحث */
+.search-summary {
+    background-color: #e6f7ff;
+    /* خلفية زرقاء فاتحة جداً */
+    border: 1px solid #91d5ff;
+    /* حدود زرقاء فاتحة */
+    color: #0050b3;
+    /* نص أزرق داكن */
+    padding: 12px 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* نمط الجدول لعرض النتائج */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    /* إزالة المسافات بين خلايا الجدول */
+    margin-top: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    /* إخفاء أي محتوى يتجاوز الحدود المستديرة */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+}
+
+.data-table thead {
+    background-color: #007bff;
+    /* خلفية رأس الجدول باللون الأزرق */
+    color: white;
+}
+
+.data-table th,
+.data-table td {
+    padding: 15px;
+    text-align: center;
+    /* توسيط محتوى الخلايا */
+    border-bottom: 1px solid #dee2e6;
+    /* خط فاصل بين الصفوف */
+}
+
+.data-table th {
+    font-weight: 600;
+    white-space: nowrap;
+    /* منع التفاف النص في رؤوس الأعمدة */
+}
+
+.data-table tbody tr:nth-child(even) {
+    background-color: #f2f7fc;
+    /* تظليل الصفوف الزوجية */
+}
+
+.data-table tbody tr:hover {
+    background-color: #e9ecef;
+    /* تغيير لون الخلفية عند التحويم */
+    transition: background-color 0.2s ease-in-out;
+}
+
+/* نمط الأزرار داخل الجدول (خاصة زر "عرض") */
+.data-table .button {
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    /* إزالة التسطير من الروابط */
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.data-table .view-button {
+    background-color: #28a745;
+    /* لون أخضر لزر العرض */
+    color: white;
+    border: 1px solid #28a745;
+}
+
+.data-table .view-button:hover {
+    background-color: #218838;
+    /* لون أخضر أغمق عند التحويم */
+    transform: translateY(-1px);
+}
+
+/* نمط زر العودة */
+.back {
+    display: block;
+    margin: 40px auto 20px auto;
+    /* توسيط الزر مع مسافة علوية وسفلية */
+    width: fit-content;
+    padding: 12px 35px;
+    background-color: #6c757d;
+    /* لون رمادي لزر العودة */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(108, 117, 125, 0.2);
+}
+
+.back:hover {
+    background-color: #545b62;
+    /* لون رمادي أغمق عند التحويم */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(108, 117, 125, 0.3);
+}
+
+.back:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 10px rgba(108, 117, 125, 0.1);
+}
+
+/* التجاوبية (Responsive Design) */
+@media (max-width: 768px) {
+    .container {
+        margin: 20px auto;
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+        margin-bottom: 25px;
+    }
+
+    .search-form .form-group {
+        flex-direction: column;
+        /* جعل العناصر تتكدس عمودياً على الشاشات الصغيرة */
+        align-items: flex-end;
+        /* محاذاة العناصر لليمين */
+        gap: 8px;
+    }
+
+    .search-form .form-group label {
+        flex: auto;
+        width: 100%;
+        /* جعل التسمية تأخذ عرض 100% */
+        text-align: right;
+        padding-left: 0;
+    }
+
+    .search-form .form-group input,
+    .search-form .form-group select {
+        width: 100%;
+        /* جعل الحقول تأخذ عرض 100% */
+        max-width: 100%;
+        /* إزالة الحد الأقصى للعرض */
+    }
+
+    .data-table th,
+    .data-table td {
+        padding: 10px;
+        /* تقليل المسافة الداخلية للخلايا */
+        font-size: 0.9rem;
+        /* تقليل حجم الخط في الجدول */
+        white-space: normal;
+        /* السماح بالتفاف النص في الخلايا */
+    }
+
+    .search-form button[type="submit"],
+    .back {
+        width: 80%;
+        /* جعل الأزرار أعرض قليلاً */
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 15px;
+        margin: 15px auto;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+    }
+
+    .message {
+        padding: 12px;
+        font-size: 0.9rem;
+    }
+
+    .search-summary {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+}

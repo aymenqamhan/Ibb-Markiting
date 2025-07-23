@@ -1,0 +1,29 @@
+        <form method="POST" action="" class="status-update-form">
+            <input type="hidden" name="purchase_order_id" value="<?php echo htmlspecialchars($purchase_order['id']); ?>">
+            
+            <div class="form-group">
+                <label for="status">تغيير الحالة إلى:</label>
+                <select id="status" name="status">
+                    <option value="draft" <?php echo ($purchase_order['status'] == 'draft') ? 'selected' : ''; ?>>مسودة</option>
+                    <option value="pending" <?php echo ($purchase_order['status'] == 'pending') ? 'selected' : ''; ?>>معلق</option>
+                    <option value="received" <?php echo ($purchase_order['status'] == 'received') ? 'selected' : ''; ?>>مستلم جزئياً</option>
+                    <option value="completed" <?php echo ($purchase_order['status'] == 'completed') ? 'selected' : ''; ?>>مكتمل</option>
+                    <option value="cancelled" <?php echo ($purchase_order['status'] == 'cancelled') ? 'selected' : ''; ?>>ملغي</option>
+                </select>
+                <input type="submit" name="update_status" value="تحديث الحالة واستلام الكميات">
+            </div>
+            </form>
+            <h2>إجراءات إضافية</h2>
+        <div class="action-buttons">
+            <?php if ($purchase_order['status'] != 'completed' && $purchase_order['status'] != 'cancelled'): ?>
+                <button type="button" class="button edit-button" onclick="window.location.href='edit_purchase_order.php?id=<?php echo htmlspecialchars($purchase_order['id']); ?>';">تعديل أمر الشراء</button>
+            <?php endif; ?>
+            <?php if ($purchase_order['status'] != 'cancelled' && $purchase_order['status'] != 'completed'): ?>
+                <form method="POST" action="" style="display: inline-block;">
+                    <input type="hidden" name="purchase_order_id" value="<?php echo htmlspecialchars($purchase_order['id']); ?>"> 
+                </form>
+            <?php elseif ($purchase_order['status'] == 'cancelled'): ?>
+                <p>تم إلغاء أمر الشراء هذا.</p>
+            <?php endif; ?>
+        </div>
+    </div> -->

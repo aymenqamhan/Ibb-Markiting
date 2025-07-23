@@ -1,0 +1,171 @@
+/* التصميم العام */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.cart-container {
+    width: 80%;
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.cart-table th, .cart-table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.cart-table th {
+    background-color: #007bff;
+    color: white;
+}
+
+.cart-table td a.remove-btn {
+    color: red;
+    text-decoration: none;
+}
+
+.cart-table td a.remove-btn:hover {
+    text-decoration: underline;
+}
+
+.total-price {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.empty-cart {
+    text-align: center;
+    font-size: 18px;
+    color: #888;
+}
+.pay-btn {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.pay-btn:hover {
+    background-color: #218838;
+}
+
+.remove-btn {
+    color: red;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.remove-btn:hover {
+    text-decoration: underline;
+}
+
+.total-price {
+    font-size: 18px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.empty-cart {
+    font-size: 18px;
+    color: gray;
+}
+
+.cart-table th, .cart-table td {
+    padding: 8px 12px;
+    text-align: center;
+}
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.pay-btn {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.pay-btn:hover {
+    background-color: #218838;
+}
+
+.remove-btn {
+    color: red;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.remove-btn:hover {
+    text-decoration: underline;
+}
+
+.total-price {
+    font-size: 18px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.empty-cart {
+    font-size: 18px;
+    color: gray;
+}
+
+.cart-table th, .cart-table td {
+    padding: 8px 12px;
+    text-align: center;
+}
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+input[type="text"] {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 200px;
+}
+
+label {
+    margin-top: 10px;
+    display: block;
+}
+
+
+@media (max-width: 600px) {
+    .cart-container {
+        width: 90%;
+    }
+
+    .cart-table td, .cart-table th {
+        font-size: 14px;
+    }
+}

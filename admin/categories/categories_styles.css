@@ -1,0 +1,251 @@
+
+/* ==================== الأنماط العامة للصفحة ==================== */
+body {
+    background-color: #f0f2f5; /* لون خلفية خفيف لراحة العين */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* خط حديث وواضح */
+    direction: rtl; /* لضمان التوجيه الصحيح للعربية */
+    text-align: right; /* محاذاة النص لليمين */
+}
+
+/* ==================== شريط التنقل (Navbar) ==================== */
+.navbar {
+    background-color: #2c3e50; /* لون داكن لشريط التنقل */
+    padding: 1rem 0; /* مسافة داخلية علوية وسفلية */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* ظل خفيف لشريط التنقل */
+}
+
+.navbar-brand {
+    color: #ecf0f1 !important; /* لون فاتح لشعار الموقع */
+    font-weight: bold; /* نص سميك */
+    font-size: 1.5rem; /* حجم خط كبير */
+    display: flex; /* لترتيب الأيقونة والنص جنبًا إلى جنب */
+    align-items: center; /* محاذاة العناصر عمودياً في المنتصف */
+}
+
+.navbar-nav .nav-link {
+    color: #ecf0f1 !important; /* لون فاتح لروابط التنقل */
+    margin-left: 15px; /* مسافة بين الروابط */
+    transition: color 0.3s ease; /* انتقال سلس عند التحويم */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #3498db !important; /* لون أزرق عند التحويم */
+}
+
+/* ==================== عنوان الصفحة الرئيسي (Page Header) ==================== */
+.page-header {
+    background-color: #3498db; /* لون أزرق جذاب للعنوان */
+    color: white; /* لون النص أبيض */
+    padding: 2rem 0; /* مسافة داخلية كبيرة */
+    margin-bottom: 2rem; /* مسافة أسفل العنوان */
+    text-align: center; /* محاذاة النص في المنتصف */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ظل للعنوان */
+}
+
+.page-header h1 {
+    margin: 0; /* إزالة الهامش الافتراضي */
+    font-size: 2.5rem; /* حجم خط كبير للعنوان */
+    display: flex; /* لترتيب الأيقونة والنص */
+    align-items: center; /* محاذاة عمودياً */
+    justify-content: center; /* محاذاة أفقياً */
+}
+
+.page-header p.lead {
+    font-size: 1.1rem; /* حجم خط أكبر للنص الوصفي */
+    opacity: 0.9; /* شفافية خفيفة */
+    margin-top: 0.5rem; /* مسافة بين العنوان والنص الوصفي */
+}
+
+/* ==================== الحاويات والبطاقات (Containers & Cards) ==================== */
+.container, .container-fluid {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+}
+
+.card {
+    border-radius: 10px; /* زوايا مستديرة للبطاقات */
+    border: none; /* إزالة الحدود */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* ظل للبطاقات */
+    margin-bottom: 1.5rem; /* مسافة أسفل كل بطاقة */
+}
+
+.card-header {
+    background-color: #2c3e50; /* لون داكن لرأس البطاقة */
+    color: white; /* لون النص أبيض */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* خط فاصل خفيف */
+    border-top-left-radius: 10px; /* زوايا مستديرة علوية */
+    border-top-right-radius: 10px;
+    padding: 1rem 1.5rem; /* مسافة داخلية */
+    display: flex; /* لترتيب العناصر (عنوان وزر) جنبًا إلى جنب */
+    justify-content: space-between; /* توزيع المساحة بين العناصر */
+    align-items: center; /* محاذاة العناصر عمودياً */
+}
+
+.card-header h5 {
+    margin-bottom: 0; /* إزالة الهامش الافتراضي */
+    display: flex; /* لترتيب الأيقونة والنص */
+    align-items: center; /* محاذاة عمودياً */
+}
+
+/* ==================== عناصر النموذج (Form Elements) ==================== */
+.form-label {
+    font-weight: bold; /* نص سميك للتسميات */
+    color: #34495e; /* لون داكن للتسميات */
+    margin-bottom: 0.5rem; /* مسافة أسفل التسمية */
+}
+
+.form-control, .form-select {
+    border-radius: 5px; /* زوايا مستديرة لحقول الإدخال والقوائم المنسدلة */
+    border: 1px solid #ced4da; /* حدود خفيفة */
+    padding: 0.75rem 1rem; /* مسافة داخلية */
+    transition: all 0.3s ease; /* انتقال سلس للتركيز */
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #3498db; /* لون الحدود أزرق عند التركيز */
+    box-shadow: 0 0 0 0.25rem rgba(52, 152, 219, 0.25); /* ظل خفيف عند التركيز */
+}
+
+/* ==================== الأزرار (Buttons) ==================== */
+.btn {
+    font-weight: bold;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary, .btn-success {
+    background-color: #28a745; /* لون أخضر للزر الأساسي/النجاح */
+    border-color: #28a745;
+    color: white;
+}
+.btn-primary:hover, .btn-success:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+    transform: translateY(-2px);
+}
+
+.btn-info {
+    background-color: #17a2b8; /* لون أزرق فاتح للمعلومات/التعديل */
+    border-color: #17a2b8;
+    color: white;
+}
+.btn-info:hover {
+    background-color: #138496;
+    border-color: #117a8b;
+    transform: translateY(-1px);
+}
+
+.btn-warning {
+    background-color: #ffc107; /* لون أصفر للتحذير/التعديل (في نموذج التعديل) */
+    border-color: #ffc107;
+    color: #343a40; /* لون نص داكن */
+}
+.btn-warning:hover {
+    background-color: #e0a800;
+    border-color: #d39e00;
+    transform: translateY(-2px);
+}
+
+.btn-danger {
+    background-color: #dc3545; /* لون أحمر للخطر/الحذف */
+    border-color: #dc3545;
+    color: white;
+}
+.btn-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+    transform: translateY(-1px);
+}
+
+.btn-back-dashboard {
+    background-color: #3498db; /* لون أزرق لزر العودة للوحة التحكم */
+    border-color: #3498db;
+    color: white;
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+.btn-back-dashboard:hover {
+    background-color: #2980b9;
+    border-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+/* أزرار صغيرة داخل الجداول */
+.table .btn-sm {
+    padding: 0.375rem 0.75rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    border-radius: 0.2rem;
+}
+
+/* ==================== رسائل التنبيه (Alerts) ==================== */
+.alert {
+    border-radius: 8px; /* زوايا مستديرة للتنبيهات */
+    font-weight: 500; /* نص متوسط السماكة */
+    margin-bottom: 1.5rem; /* مسافة أسفل التنبيهات */
+}
+
+.alert-success {
+    background-color: #d4edda; /* لون خلفية أخضر فاتح */
+    color: #155724; /* لون نص أخضر داكن */
+    border-color: #c3e6cb; /* لون حدود أخضر متوسط */
+}
+
+.alert-danger {
+    background-color: #f8d7da; /* لون خلفية أحمر فاتح */
+    color: #721c24; /* لون نص أحمر داكن */
+    border-color: #f5c6cb; /* لون حدود أحمر متوسط */
+}
+
+.alert-info {
+    background-color: #d1ecf1; /* لون خلفية أزرق فاتح */
+    color: #0c5460; /* لون نص أزرق داكن */
+    border-color: #bee5eb; /* لون حدود أزرق متوسط */
+}
+
+.btn-close {
+    filter: invert(1); /* يجعل أيقونة الإغلاق بيضاء لتكون مرئية على الخلفيات الداكنة */
+}
+
+/* ==================== الجداول (Tables) ==================== */
+.table-responsive {
+    margin-top: 1rem; /* مسافة أعلى الجدول */
+}
+
+.table {
+    border-radius: 8px; /* زوايا مستديرة للجدول */
+    overflow: hidden; /* مهم لجعل الزوايا المستديرة تظهر بشكل صحيح */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* ظل خفيف للجدول */
+}
+
+.table th, .table td {
+    padding: 1rem; /* مسافة داخلية للخلايا */
+    vertical-align: middle; /* محاذاة عمودية في المنتصف */
+}
+
+.table thead th {
+    background-color: #34495e; /* لون رأس الجدول */
+    color: white; /* لون النص أبيض */
+    border-bottom: none; /* إزالة الحدود السفلية لرأس الجدول */
+    font-weight: bold; /* نص سميك */
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #f8f9fa; /* لون خلفية للصفوف الزوجية */
+}
+
+.table tbody tr:hover {
+    background-color: #e9ecef; /* لون عند التحويم على الصفوف */
+}
+
+.table tbody tr.highlight {
+    background-color: #fff3cd; /* لون تمييز للقسم الذي يتم تعديله */
+    font-weight: bold; /* نص سميك للقسم المميز */
+}
+
+/* ==================== الأيقونات (Font Awesome) ==================== */
+.me-1 { margin-inline-end: 0.25rem !important; }
+.me-2 { margin-inline-end: 0.5rem !important; }

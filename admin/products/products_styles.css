@@ -1,0 +1,217 @@
+/* تنسيق الجسم العام للصفحة */
+body {
+    font-family: "Cairo", sans-serif;
+    direction: rtl;
+    background-color: #f9fafb;
+    padding: 20px;
+    text-align: center;
+}
+
+/* تنسيق العنوان */
+h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #2c3e50;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 4px solid #3498db;
+    display: inline-block;
+}
+
+/* تنسيق النموذج */
+form {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 40%;
+    margin: auto;
+    transition: all 0.3s ease;
+}
+
+form:hover {
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* تنسيق التسميات */
+label {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #34495e;
+    text-align: right;
+}
+
+/* تنسيق المدخلات */
+input[type="text"],
+input[type="number"],
+select,
+textarea,
+input[type="file"] {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.3);
+}
+
+/* تنسيق أزرار submit */
+button[type="submit"] {
+    background: #3498db;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    width: 80%;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+button[type="submit"]:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+}
+
+/* تنسيق زر العودة */
+.back {
+    margin-top: 15px;
+    background-color: #2b666e;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+}
+
+.back:hover {
+    background-color: #008ba3;
+}
+
+
+/* تنسيق الجدول */
+table {
+    width: 80%;
+    margin: auto;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+table th,
+table td {
+    border: 1px solid #ddd;
+    padding: 14px;
+    text-align: center;
+    font-size: 16px;
+}
+
+table th {
+    background-color: #3498db;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ecf0f1;
+}
+
+/* تنسيق الروابط */
+a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #2980b9;
+}
+
+/* تنسيق الأزرار الخاصة بالحذف والتعديل */
+.a_delete,
+.a_edit {
+    background-color: transparent;
+    color: #e74c3c;
+    border: 2px solid #e74c3c;
+    padding: 8px 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+}
+
+.a_delete:hover,
+.a_edit:hover {
+    background-color: #e74c3c;
+    color: white;
+    transform: scale(1.1);
+}
+
+.views{
+    color: #e74c3c;
+    text-align: center;
+}
+
+/* تحديد حجم الصورة */
+.product-image {
+    width: 80px;
+    height: 65px;
+    object-fit: cover;
+    /* للحفاظ على التناسب */
+}
+
+/* تحسين التوافق مع الأجهزة المحمولة */
+@media (max-width: 768px) {
+    form {
+        width: 90%;
+        padding: 20px;
+    }
+
+    button[type="submit"],
+    .back {
+        font-size: 16px;
+        padding: 12px;
+    }
+}
+
+/* تحسين التناسق مع الشاشات الكبيرة */
+@media (min-width: 1024px) {
+    form {
+        width: 40%;
+    }
+
+    button[type="submit"] {
+        font-size: 20px;
+        padding: 16px;
+    }
+}

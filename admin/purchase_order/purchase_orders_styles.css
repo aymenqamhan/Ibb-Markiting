@@ -1,0 +1,281 @@
+/* purchase_orders_styles.css */
+
+/* General Body and Container Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #eef1f6; /* Light background for the page */
+    margin: 0;
+    padding: 20px;
+    direction: rtl; /* Right-to-left for Arabic content */
+    text-align: right; /* Align text to the right for RTL */
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1000px; /* Max width for content */
+    margin: 30px auto; /* Center the container with top/bottom margin */
+    background-color: #ffffff; /* White background for the main content area */
+    padding: 30px;
+    border-radius: 10px; /* Slightly rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Soft shadow */
+}
+
+/* Headings */
+h1 {
+    color: #2c3e50; /* Darker blue-gray for main heading */
+    text-align: center; /* Center main title */
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e0e0e0; /* Underline for main heading */
+}
+
+h2 {
+    color: #34495e; /* Slightly lighter blue-gray for subheadings */
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e9ecef; /* Lighter underline for subheadings */
+}
+
+/* Message Styles (for PHP session messages) */
+.message {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: right;
+    border: 1px solid transparent; /* Default border */
+}
+
+.message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border-color: #c3e6cb;
+}
+
+.message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border-color: #f5c6cb;
+}
+
+/* Information Sections (Order and Supplier Details) */
+.order-details, .supplier-details {
+    background-color: #f8f9fa; /* Light gray background */
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    border: 1px solid #dee2e6; /* Light border */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow for info cards */
+}
+
+.order-details p, .supplier-details p {
+    margin-bottom: 10px;
+    font-size: 1.05em;
+    color: #444;
+}
+
+.order-details strong, .supplier-details strong {
+    color: #222;
+}
+
+/* Status Badge Styles */
+.status-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: #fff; /* Default text color for badges */
+    min-width: 80px; /* Ensure badges have a minimum consistent width */
+    text-align: center;
+}
+
+.status-badge.draft {
+    background-color: #6c757d; /* Bootstrap secondary gray */
+}
+.status-badge.pending {
+    background-color: #ffc107; /* Bootstrap warning yellow */
+    color: #343a40; /* Dark text for light background */
+}
+.status-badge.received {
+    background-color: #17a2b8; /* Bootstrap info cyan */
+}
+.status-badge.completed {
+    background-color: #28a745; /* Bootstrap success green */
+}
+.status-badge.cancelled {
+    background-color: #dc3545; /* Bootstrap danger red */
+}
+
+/* Table Styles */
+.data-table {
+    width: 100%;
+    border-collapse: collapse; /* Collapse borders for a cleaner look */
+    margin-bottom: 25px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Shadow for the table */
+    border-radius: 8px; /* Rounded corners for the table */
+    overflow: hidden; /* Ensures rounded corners apply to content */
+}
+
+.data-table thead {
+    background-color: #f0f4f7; /* Light blue-gray for table header */
+    color: #34495e;
+}
+
+.data-table th,
+.data-table td {
+    padding: 12px 15px;
+    border: 1px solid #e9ecef; /* Light border for cells */
+    text-align: right; /* Align text to the right in cells */
+}
+
+.data-table th {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+.data-table tbody tr:nth-child(even) {
+    background-color: #fdfdfd; /* Slightly different background for even rows */
+}
+
+.data-table tbody tr:hover {
+    background-color: #f5f5f5; /* Light highlight on hover */
+}
+
+/* Form for Status Update and Receiving Products */
+.status-update-form {
+    background-color: #f8f9fa; /* Light gray background */
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    border: 1px solid #dee2e6;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.status-update-form .form-group {
+    margin-bottom: 20px;
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Align items vertically */
+    gap: 20px; /* Space between form elements */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.status-update-form label {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 5px; /* Space below label */
+    min-width: 120px; /* Give labels a consistent minimum width */
+}
+
+.status-update-form select,
+.status-update-form input[type="text"],
+.status-update-form input[type="number"],
+.status-update-form input[type="email"],
+.status-update-form input[type="tel"] {
+    width: 100%; /* Full width within their container */
+    padding: 10px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    font-size: 1em;
+}
+
+/* Specific styling for the received quantity input */
+.received-quantity-input {
+    width: 90px !important; /* Specific fixed width, override 100% */
+    text-align: center;
+    flex-shrink: 0; /* Prevent it from shrinking too much in flex layout */
+}
+
+
+/* Buttons */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: none;
+    text-align: center;
+}
+
+.add-button { /* Used for 'تعديل' button */
+    background-color: #007bff; /* Bootstrap primary blue */
+    color: white;
+}
+
+.add-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.back { /* Used for 'العودة لقائمة أوامر الشراء' button */
+    background-color: #6c757d; /* Bootstrap secondary gray */
+    color: white;
+    padding: 10px 20px; /* Ensure consistent padding with other buttons */
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.back:hover {
+    background-color: #5a6268; /* Darker gray on hover */
+}
+
+/* Footer-like spacing for buttons if they are at the bottom */
+.button-group {
+    display: flex;
+    justify-content: flex-start; /* Align buttons to the right in RTL */
+    gap: 15px; /* Space between buttons */
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        margin: 15px;
+        padding: 20px;
+    }
+    h1 {
+        font-size: 1.8em;
+    }
+    h2 {
+        font-size: 1.4em;
+    }
+    .order-details, .supplier-details, .status-update-form {
+        padding: 15px;
+    }
+    .status-update-form .form-group {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: flex-start; /* Align to the start */
+        gap: 10px;
+    }
+    .status-update-form select,
+    .status-update-form input[type="text"],
+    .status-update-form input[type="number"] {
+        width: 100%; /* Ensure inputs take full width */
+    }
+    .received-quantity-input {
+        width: 100px !important; /* Adjust width for small screens if needed */
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 15px;
+    }
+    .data-table th, .data-table td {
+        padding: 8px 10px;
+        font-size: 0.9em;
+    }
+}

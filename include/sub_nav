@@ -1,0 +1,7 @@
+<nav class='sub_nav'>
+<?php while ($row = $result->fetch_assoc()) {?>
+    <ul>
+        <a href=""><li><?php echo htmlspecialchars($row['category_name']);?></li></a>
+    </ul>
+    <?php }?>
+</nav>

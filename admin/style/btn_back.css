@@ -1,0 +1,37 @@
+.back {
+    margin-top: 15px;
+    background-color: #2b666e;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    margin-right: auto;
+    margin-left: auto; /* جعل الزر في المنتصف */
+    display: block; /* لضمان أن الزر يأخذ المساحة بشكل صحيح */
+}
+
+/* تأثير hover */
+.back:hover {
+    background-color: #008ba3;
+}
+
+/* Media query للأجهزة الصغيرة */
+@media (max-width: 768px) {
+    .back {
+        font-size: 14px;
+        padding: 6px 12px;
+        margin-top: 10px;
+    }
+}
+
+/* Media query للشاشات الكبيرة */
+@media (min-width: 1024px) {
+    .back {
+        font-size: 18px;
+        padding: 10px 20px;
+        margin-top: 20px;
+    }
+}

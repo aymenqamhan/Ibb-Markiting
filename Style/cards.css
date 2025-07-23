@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    padding: 30px;
+    direction: rtl;
+    text-align: right;
+}
+
+/* بطاقة المنتج */
+.product-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(14px);
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    width: 330px;
+    padding: 15px;
+    margin: 20px;
+    display: inline-block;
+    text-align: center;
+    animation: fadeInUp 0.6s ease forwards;
+    transform-origin: center;
+    transition: transform 0.4s ease;
+}
+.product-card:hover {
+    transform: perspective(1000px) rotateY(3deg) scale(1.05);
+}
+
+/* الصورة */
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    filter: blur(0);
+    transition: filter 0.4s ease;
+}
+.product-image:loaded, .product-image[src] {
+    filter: blur(0);
+}
+
+/* شارة جديدة */
+.product-status {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: linear-gradient(135deg, #ff6a00, #ee0979);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* العنوان */
+.product-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0;
+}
+
+/* التقييم */
+.rating {
+    color: #ffd700;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* الوصف */
+.product-description {
+    font-size: 14px;
+    color: #555;
+    height: 40px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+/* السعر */
+.product-price {
+    font-size: 20px;
+    color: #2b666e;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* أزرار */
+.product-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+button,
+.cart-btn,
+.details-btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* شراء الآن */
+.buy-btn {
+    background: linear-gradient(135deg, #00c9ff, #92fe9d);
+    color: white;
+    animation: pulse 1.5s infinite;
+}
+.buy-btn:hover {
+    background: linear-gradient(135deg, #00acc1, #76e6a1);
+}
+
+/* أضف إلى السلة */
+.cart-btn {
+    border-radius: 5px;
+    padding: 10px;
+    background: #ff9800;    
+    color: white;
+    text-decoration: none;
+}
+
+.cart-btn:hover {
+    background: #e68900;
+}
+
+/* انميشن */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(0, 201, 255, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(0, 201, 255, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(0, 201, 255, 0); }
+}
